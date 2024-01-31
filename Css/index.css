@@ -1,0 +1,842 @@
+/*Start Format*/
+@font-face {
+  font-family: "Cookies Bold";
+  src: url('../Fonts/Cookies\ and\ Cheese\ Bold\ -Demo.ttf');
+}
+
+@font-face {
+  font-family: "Basketball";
+  src: url('../Fonts/Basketball.otf');
+}
+
+:root {
+  --heading-color: #383848;
+  --fore-color: #fff;
+  --famous-color: rgb(227, 227, 47);
+  --heading-font1: "Cookies Bold";
+  --heading-font2: "Basketball";
+  --main-font: Arial;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/*Start Format*/
+/*Header Format*/
+.container header {
+  background-image: url("../Images/home_bg.jpeg");
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+}
+
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container header nav img {
+  width: 80px;
+  margin-left: 100px;
+}
+
+.container header nav div ul {
+  list-style-type: none;
+  display: flex;
+  margin-right: 80px;
+}
+
+.container header nav div ul li {
+  width: 100px;
+  margin-left: 1px;
+  text-align: center;
+  height: 30px;
+  transform: all 0.5s linear;
+}
+
+.container header nav div ul li:hover {
+  border-bottom: 2px solid yellowgreen;
+}
+
+.container header nav div ul li a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: var(--main-font);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container header h1,
+.container header h3 {
+  color: var(--fore-color);
+  text-align: center;
+}
+
+.container header h1 {
+  margin-top: 15%;
+  margin-bottom: 2%;
+  font-size: 60px;
+  font-family: var(--heading-font2);
+}
+
+.container header h3 {
+  margin-top: 3%;
+  margin-bottom: 1%;
+  font-size: 30px;
+  font-family: var(--main-font);
+}
+
+.container header span {
+  color: yellowgreen;
+  cursor: pointer;
+}
+
+.container header button.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 3% auto;
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.container header button.btn-primary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: all 0.5s linear;
+}
+
+.container header button.btn-primary:hover {
+  background-color: yellowgreen;
+  color: navy;
+}
+
+/*Responsive Header*/
+ @media (max-width:2560px) {
+  .container header{
+    height: 1000px;
+  }
+}
+@media (max-width:1024px) {
+  .container header{
+    height: 700px;
+  }
+}
+@media (max-width:768px) {
+  .container header nav img {
+    margin-left: 20px;
+  }
+  .container header nav div ul {
+    margin-right: 20px;
+  }
+  .container header h3 {
+    margin-top: 6%;
+  }
+  .container header button.btn-primary {
+    margin-top: 8%;
+  }
+} 
+@media (max-width:425px) {
+  .container header nav img {
+    width: 40px;
+  }
+  .container header nav div ul {
+    margin-right: 10%;
+  }
+  .container header nav div ul li {
+    width: 70px;
+  }
+  .container header nav div ul li a {
+  line-height: 30px;
+  }
+  .container header h1 {
+    margin-top: 30%;
+    padding: 5px;
+  }
+  .container header h3 {
+    margin-top: 20%;
+    padding: 20px;
+  }
+  .container header button.btn-primary {
+    margin-top: 20%;
+  }
+}
+@media (max-width:375px) {
+  .container header nav img {
+    margin-left: 10%;
+  }
+  .container header nav div ul li {
+    width: 65px;
+  }
+}
+@media (max-width:320px) {
+  .container header nav img {
+    margin-left: 10%;
+  }
+  .container header nav div ul li {
+    width: 60px;
+    font-size: 10px;
+  }
+}
+/*Responsive Header*/
+/*Header Format*/
+/*Main Format*/
+.container main {
+  width: 100%;
+}
+
+/*************** About Article *****************/
+.container main article.about {
+  background-color: #f4f4f4;
+}
+
+.container main article.about div h2,
+.container main article.menu div h2,
+.container main article.ourMenu div h2 {
+  text-align: center;
+  font-family: var(--heading-font2);
+  color: var(--heading-color);
+  margin-bottom: 2%;
+  padding-top: 2%;
+  font-size: 50px;
+}
+
+.container main article.about div h3,
+.container main article.menu div h3,
+.container main article.ourMenu div h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: yellowgreen;
+  text-align: center;
+  margin-bottom: 2%;
+  font-size: 40px;
+}
+
+.container main article.about aside {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+}
+
+.container main article.about aside article {
+  width: 50%;
+  padding: 20px;
+}
+
+.container main article.about aside article:nth-child(1) p {
+  line-height: 2.5;
+  color: gray;
+  text-align: justify;
+}
+
+.container main article.about aside article:nth-child(1) button.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5%;
+  transition: all 0.5s ease-in-out;
+}
+
+.container main article.about aside article:nth-child(1) button.btn-secondary {
+  background-color: var(--heading-color);
+  color: var(--fore-color);
+}
+
+.container main article.about aside article:nth-child(1) button.btn-secondary:hover {
+  background-color: yellowgreen;
+  color: navy;
+}
+
+.container main article.about aside article:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Responsive About Article*/
+@media (max-width:2560px) {
+  .container main article.about aside article:nth-child(1) p {
+    line-height: 4;
+    font-size: 28px;
+  }
+}
+@media (max-width:1440px) {
+  .container main article.about aside article:nth-child(1) p {
+    line-height: 2.5;
+    font-size: 20px;
+  }
+}
+@media (max-width:768px) {
+  .container main article.about aside {
+    width: 95%;
+  }  
+}
+@media (max-width:425px) {
+  .container main article.about aside {
+    flex-direction: column;
+  }  
+  .container main article.about aside article {
+ width: 100%;
+  }
+}
+/*Responsive About Article*/
+/*************** About Article *****************/
+/********* Menu Article *********/
+.container main article.menu {
+  background-image: url("../Images/offer-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container main article.menu div h2 {
+  color: white;
+}
+
+.container main article.menu aside {
+  display: flex;
+  width: 80%;
+  margin: 0px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container main article.menu aside article {
+  width: calc(72% / 3);
+  text-align: center;
+}
+
+.container main article.menu aside article img {
+  border: 2px solid red;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s linear;
+  width: 100%;
+  height: 100%;
+}
+
+.container main article.menu aside article img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.container main article.menu aside article h2 {
+  margin: 10% 0px 10% 0px;
+  color: white;
+  font-family: var(--heading-font2);
+}
+
+.container main article.menu aside article p:nth-of-type(1) {
+  color: white;
+  font-family: var(--main-font);
+  text-align: justify;
+  padding: 5px;
+}
+
+.container main article.menu aside article p:nth-of-type(2) {
+  color: white;
+  font-family: var(--main-font);
+  text-align: center;
+  padding: 5px;
+}
+
+.container main article.menu aside article p:nth-of-type(2) strong {
+  color: yellowgreen;
+  font-family: var(--heading-font2);
+  text-align: center;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+/*****  Responsive Menu Article *****/
+@media (max-width:425px) {
+  .container main article.menu aside {
+    flex-direction: column;
+  }
+  .container main article.menu aside article {
+    margin-top: 50px;
+   width: 100%;
+  } 
+  .container main article.menu div h3{
+    padding: 15px;
+  }  
+}
+/*****  Responsive Menu Article *****/
+/*********** Menu Article***********/
+/****** Aur Menu Article *******/
+.container main article.ourMenu {
+  background-color: #f4f4f4;
+  width: 100%;
+  padding-bottom: 7%;
+}
+
+.container main article.ourMenu aside {
+  width: 80%;
+  display: flex;
+  margin: 0px auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container main article.ourMenu aside article {
+  width: 50%;
+  padding: 20px;
+}
+
+.container main article.ourMenu aside article div img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+.container main article.ourMenu aside article div {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 2%;
+}
+.container main article.ourMenu aside article:nth-child(2){
+  margin-left: 25%;
+}
+.container main article.ourMenu aside article div div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  position: relative;
+}
+
+.container main article.ourMenu aside article div div h4:nth-child(1) {
+  font-size: 30px;
+  font-family: var(--heading-font2);
+}
+
+.container main article.ourMenu aside article div div p {
+  text-align: justify;
+  margin-top: 15px;
+  font-family: var(--main-font);
+}
+
+.container main article.ourMenu aside article div div h4:nth-of-type(2) {
+  font-size: 30px;
+  font-family: var(--heading-font2);
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  background-color: #383848;
+  padding: 5px 10px;
+  color: var(--fore-color);
+  cursor: pointer;
+  transition: all 1s linear;
+}
+
+.container main article.ourMenu aside article div div h4:nth-of-type(2):hover {
+  background-color: yellowgreen;
+  transform: rotate(360deg);
+}
+
+/*********** Responive Our Menu************/
+@media (max-width:1440px) {
+  .container main article.ourMenu aside article:nth-child(2){
+    margin-left: 0%;
+  }
+  .container main article.ourMenu div h2 {
+   padding-top: 70px;
+  }
+}
+@media (max-width:1024px) {
+  .container main article.ourMenu aside {
+    width: 95%;
+  }
+  .container main article.ourMenu aside article div div h4:nth-child(1) {
+    font-size:22px;
+  }
+}
+@media (max-width:768px) {
+  .container main article.ourMenu aside {
+    width: 90%;
+    flex-direction: column;
+  }
+  .container main article.ourMenu aside article {
+    width: 100%;
+  }
+}
+@media (max-width:425px) {
+  .container main article.ourMenu aside {
+    width: 100%;
+  }
+  .container main article.ourMenu aside article {
+    width: 100%;
+    font-size: 10px !important;
+  }
+  .container main article.ourMenu aside article div img {
+    width: 60px;
+    height: 60px;
+    margin-top: 5%;
+  }
+  .container main article.ourMenu aside article div div h4:nth-of-type(2) {
+    top: 10px;
+    right: -25px;
+    font-size: 15px;
+  }
+}
+@media (max-width:375px){
+  .container main article.ourMenu aside article div div h4:nth-child(1) {
+    font-size: 20px;
+  }
+}
+@media (max-width:320px){
+  .container main article.ourMenu aside article div div h4:nth-child(1) {
+    font-size:15px;
+  }
+  .container main article.ourMenu div h3 {
+    padding: 10px;
+    font-size: 25px;
+  }
+}
+/*********** Responive Our Menu************/
+.container .btn-center {
+  background-color: #383848;
+  border: none;
+  border-radius: 5px;
+  margin: 0% auto 1% auto;
+  padding: 10px 20px;
+  display: block;
+  cursor: pointer;
+  color: white;
+  font-weight: bolder;
+  transition: all 0.5s linear;
+  padding: 20px;
+}
+
+.container .btn-center:hover {
+  background-color: yellowgreen;
+}
+/****** Aur Menu Article*******/
+/******Gallery Article*******/
+.container main article.gallery {
+  margin-top: -14px;
+  background-image: url("../Images/daytime_bg.jpeg");
+  background-size: cover;
+}
+
+.container main article.gallery section {
+  width: 80%;
+  margin: 0% auto;
+  padding: 100px 0px 20px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container main article.gallery section div {
+  width: 25%;
+  text-align: center;
+  height: 200px;
+  color: var(--fore-color);
+}
+
+.container main article.gallery section div img {
+  cursor: pointer;
+}
+
+.container main article.gallery section div h2 {
+  font-family: var(--heading-font2);
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.container main article.gallery section div h3 {
+  font-family: var(--famous-color);
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+/******Responsive Gallery Article*******/
+@media (max-width:1024px){
+  .container main article.gallery section {
+    width: 90%;
+  }
+}
+@media (max-width:768px){
+  .container main article.gallery section {
+    flex-wrap: wrap;
+  }
+  .container main article.gallery section div {
+    width: 45%;
+  }
+  .container main article.gallery section div:nth-child(1),.container main article.gallery section div:nth-child(2) {
+    margin-top: -5%;
+  }
+  .container main article.gallery section div:nth-child(3),.container main article.gallery section div:nth-child(4) {
+    margin-top: 10%;
+  }
+}
+@media (max-width:425px){
+  .container main article.gallery section {
+    flex-direction: column;
+  }
+  .container main article.gallery section div {
+    width: 100%;
+  }
+  .container main article.gallery section div:nth-child(1),.container main article.gallery section div:nth-child(2) {
+    margin-top: 0%;
+  }
+  .container main article.gallery section div:nth-child(3),.container main article.gallery section div:nth-child(4) {
+    margin-top: 0%;
+  }
+  .container main article.gallery section div:nth-child(1){
+    margin-top: -15px;
+  }
+}
+/******Responsive Gallery Article*******/
+/******Gallery Article*******/
+/******Our Food Article*******/
+.container main article.ourFood {
+  background-image: url("../Images/offer-background.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 900px;
+}
+
+.container main article.ourFood h2 {
+  text-align: center;
+  color: white;
+  padding: 50px;
+  font-size: 60px;
+  letter-spacing: 4px;
+  font-family: var(--heading-font2);
+}
+
+.container main article.ourFood section {
+  width: 80%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  row-gap: 2%;
+}
+
+.container main article.ourFood section img {
+  width: 100%;
+  height: 80%;
+ background-color: yellow;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px white,
+    -2px -2px 2px 2px white;
+}
+/******Responsive Our Food*******/
+@media (max-width:768px){
+  .container main article.ourFood section {
+    width: 90%;
+  }
+}
+@media (max-width:425px){
+  .container main article.ourFood section {
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media (max-width:375px){
+  .container main article.ourFood {
+    height: 1880px;
+  }
+  .container main article.ourFood section {
+    grid-template-columns: repeat(1, 90%);
+    grid-template-rows: repeat(6, 250px);
+    justify-content: center;
+  }
+}
+@media (max-width:320px){
+  .container main article.ourFood {
+    height: 1950px;
+  }
+}
+/******Responsive Our Food*******/ 
+/******Our Food Article*******/
+/******Contact Article*******/
+.container main article.contact {
+  background-color: #f4f4f4;
+}
+
+.container main article.contact section.contactContact {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  font-family: var(--main-font);
+  font-size: 22px;
+}
+
+.container main article.contact section.contactContact div {
+  width: 50%;
+}
+
+.container main article.contact section.contactContact div:nth-of-type(1) {
+  /* font-family: var(--main-font); */
+  padding: 60px 20px 60px 20px;
+}
+
+.container main article.contact section.contactContact div:nth-of-type(1) h2 {
+  font-family: var(--heading-font2);
+  color: gray;
+}
+
+i {
+  color: blue;
+  font-size: 25px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.container main article.contact section.contactContact div:nth-of-type(2) {
+  font-family: var(--main-font);
+  padding: 50px 20px 50px 20px;
+}
+
+.container main article.contact section.contactContact div:nth-of-type(2) input,
+textarea {
+  display: block;
+  width: 90%;
+  margin: 3% auto;
+  padding: 20px 20px;
+  border: none;
+  background-color: #e3e2dd;
+  outline: none;
+  border-radius: 7px;
+}
+
+.container main article.contact section.contactContact h3,
+.container main article.contact section.contactContact p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+::placeholder {
+  color: black;
+  font-size: 18px;
+}
+
+.container main article.contact section.contactContact div:nth-of-type(2) input[type="submit"] {
+  width: 40%;
+  background-color: #383848;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 23px;
+  font-weight: bolder;
+  color: white;
+  transition: all 0.5s linear;
+  font-weight: bolder;
+}
+
+.container main article.contact section.contactContact div:nth-of-type(2) input[type="submit"]:hover {
+  background-color: yellowgreen;
+}
+/******Responsive Contact Article*******/
+@media (max-width:2650px){
+  .container main article.contact section.contactContact div:nth-of-type(2) input[type="submit"]{
+    margin-left: 51px;
+  }
+}
+@media (max-width:1440px){
+  .container main article.contact section.contactContact div:nth-of-type(2) input[type="submit"]{
+    margin-left: 25px;
+  }
+}
+@media (max-width:1024px){
+  .container main article.contact section.contactContact {
+    width: 90%;
+  }
+  .container main article.contact section.contactContact div:nth-of-type(2) input[type="submit"]{
+    margin-left: 20px;
+  }
+}
+@media (max-width:768px){
+  .container main article.contact section.contactContact {
+    width: 100%;
+    font-size: 20px;
+  }
+  .container main article.contact section.contactContact div:nth-of-type(2) input,.container main article.contact section.contactContact div:nth-of-type(2) textarea{
+    width: 100%;
+  }
+  .container main article.contact section.contactContact div:nth-of-type(2) input[type="submit"]{
+    margin-left: 0px;
+  }
+}
+@media (max-width:425px){
+  .container main article.contact section.contactContact {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container main article.contact section.contactContact div{
+    width: 95%;
+  }
+}
+@media (max-width:320px){
+  .container main article.contact section.contactContact div:nth-of-type(2) input[type="submit"]{
+    width: 50%;
+  }
+  .container main article.contact section.contactContact div:nth-of-type(1) p{
+    font-size: 15px;
+  }
+  .container main article.contact section.contactContact div:nth-of-type(1) h3{
+    font-size: 17px;
+  }
+}
+/******Responsive Contact Article*******/
+/******Contact Article*******/
+/*Main Format*/
+/*Footer Format*/
+.container footer {
+  background-color: #383848;
+  color: white;
+  text-align: center;
+  height: 80px;
+  line-height: 90px;
+  font-family: var(--main-font)
+}
+
+.container footer span {
+  color: yellowgreen;
+  font-family: var(--heading-font2);
+  cursor: pointer;
+  transition: all 1s linear;
+}
+/*Responsive Footer*/
+@media (max-width:425px){
+  .container footer{
+    font-size: 8px;
+  }
+}
+@media (max-width:320px){
+  .container footer{
+    font-size: 6px;
+  }
+}
+/*Responsive Footer*/
+/*Footer Format*/
